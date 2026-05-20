@@ -1,0 +1,16 @@
+---
+- name: Configure .gitconfig
+  template:
+    src: gitconfig.j2
+    dest: "{{ ansible_env.HOME }}/.gitconfig"
+
+- name: Configure bash aliases
+  template:
+    src: bashrc.j2
+    dest: "{{ ansible_env.HOME }}/.bashrc_ansible"
+
+- name: Source aliases in .bashrc
+  lineinfile:
+    path: "{{ ansible_env.HOME }}/.bashrc"
+    line: "source ~/.bashrc_ansible"
+    create: yes
