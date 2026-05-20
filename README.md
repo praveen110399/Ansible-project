@@ -1,2 +1,2 @@
-# ansible-dev-setup
+# ansible-project
 Automate developer environment setup with Ansible
