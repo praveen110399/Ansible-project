@@ -1,7 +1,0 @@
----
-- name: Create developer directories
-  file:
-    path: "{{ item }}"
-    state: directory
-    mode: '0755'
-  loop: "{{ directories }}"
